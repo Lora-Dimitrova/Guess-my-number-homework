@@ -10,7 +10,7 @@ int main()
     int a,b;
     cout<<"Enter border numbers for your game: ";
     cin>>a>>b;
-    int num = rand() % (b - a) + 1;
+    int num = rand() % (b - a + 1) + 1;
 
     int guess=0,br=0;
     do
