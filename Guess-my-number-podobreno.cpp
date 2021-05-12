@@ -16,6 +16,9 @@ int main()
     do
     {   cout << "Enter a guess between "<<a<<" and "<<b<<": ";
         cin>>guess;br++;
+        if (guess == 0) { 
+             break;
+        } else {
         if (guess > num) { cout<<"Too high!"<<endl;
         }
         else if (guess < num) {
@@ -26,7 +29,7 @@ int main()
         }
 
     }
-
+    }
 
     while (guess!=num && guess!=0);
     cout<<"Number of times you tried: "<<br<<endl;
