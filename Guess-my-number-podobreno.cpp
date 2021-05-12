@@ -12,7 +12,7 @@ int main()
     cout<<"Enter border numbers for your game: ";
     cin>>a;
     cin>>b;
-    int num = rand() % (b - a + 1) + 1;
+    int num = rand() % (b - a + 1) + a;
     while (a <= 0 || b <= 0 || a >= b) {
        cout<<"Invalid data\n";
        cout<<"Enter border numbers for your game: ";
@@ -23,6 +23,9 @@ int main()
     do
     {   cout << "Enter a guess between "<<a<<" and "<<b<<": ";
         cin>>guess;br++;
+        if (guess == 0) {
+            break;
+        } else {
         if (guess > num) { cout<<"Too high!"<<endl;
         }
         else if (guess < num) {
@@ -33,7 +36,7 @@ int main()
         }
 
     }
-
+    }
 
     while (guess!=num && guess!=0);
     cout<<"Number of times you tried: "<<br<<endl;
